@@ -1,33 +1,30 @@
 // Part 1 - Fizz Buzz
-// for (let i = 1; i <= 100; i++){
-//     if (!(i % 15)){
-//         console.log("Fizz Buzz");
-//     } else if (!(i % 3)){
-//         console.log("Fizz");
-//     } else if (!(i % 5)){
-//         console.log("Buzz");
-//     } else {
-//         console.log(i);
-//     }
-// }
+for (let i = 1; i <= 100; i++){
+    if (!(i % 15)){
+        console.log("Fizz Buzz");
+    } else if (!(i % 3)){
+        console.log("Fizz");
+    } else if (!(i % 5)){
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
 
 // Part 2 - Prime Time
-const n = 4;
+const n = 45;
 
-// Edge case for n = 2 (The prime number check may not work)
-// if (n < 3 && n > 1){
-//     console.log(n+1);
-// }
-
-for (let i = n; i < n*30; i++){
+for (let i = n+1; i < (n+1)*30; i++){
     let j = 2;
-    for (j; j < Math.floor(i/2); j++){
+    let half = Math.floor(i/2);
+    for (j; j < half; j++){
         if (!(i % j)){
             break;
         }
     }
-    if (j == Math.floor(i/2)){
+    if (i == (half*2) + 1 && i > 1){
         console.log(i);
+        break;
     }
     j = 2;
 }

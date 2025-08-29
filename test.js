@@ -1,4 +1,4 @@
-const n = 2;
+const n = 45;
 
 for (let i = n+1; i < (n+1)*30; i++){
     let j = 2;
@@ -8,8 +8,7 @@ for (let i = n+1; i < (n+1)*30; i++){
             break;
         }
     }
-    console.log(`i: ${i}, j: ${j}`)
-    if (j == Math.floor(i/2) && i % 2){
+    if (i == (half*2) + 1 && i > 1){
         console.log(i);
         break;
     }
