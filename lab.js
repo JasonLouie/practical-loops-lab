@@ -12,21 +12,26 @@ for (let i = 1; i <= 100; i++){
 }
 
 // Part 2 - Prime Time
-const n = 45;
+let n = 45;
+n = (n % 2) ? n+2 : n+1;
 
-for (let i = n+1; i < (n+1)*30; i++){
-    let j = 2;
-    let half = Math.floor(i/2);
-    for (j; j < half; j++){
-        if (!(i % j)){
+if (n > 0 && n < 3){ // Base case of 0 < n < 3
+    console.log(3);
+} else {
+    for (let i = n; i < (n)*30; i+=2){
+        let j = 2;
+        let half = Math.floor(i/2);
+        for (j; j < half; j+=1){
+            if (!(i % j)){
+                break;
+            }
+        }
+        if (i == (j*2) + 1 && i > 1){
+            console.log(i);
             break;
         }
+        j = 2;
     }
-    if (i == (half*2) + 1 && i > 1){
-        console.log(i);
-        break;
-    }
-    j = 2;
 }
 
 // Part 3 - Feeling Loopy
