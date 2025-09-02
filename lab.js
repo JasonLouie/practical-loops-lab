@@ -13,11 +13,11 @@ for (let i = 1; i <= 100; i++){
 
 // Part 2 - Prime Time
 let n = 45;
-n = (n % 2) ? n+2 : n+1;
 
-if (n > 0 && n < 3){ // Base case of 0 < n < 3
+if (n >= 0 && n < 3){ // Base case of 0 < n < 3
     console.log(3);
 } else {
+    n = (n % 2) ? n+2 : n+1;
     for (let i = n; i < (n)*30; i+=2){
         let j = 2;
         let half = Math.floor(i/2);
